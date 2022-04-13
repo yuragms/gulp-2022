@@ -6,9 +6,18 @@ const buildFolder = `./dist`; // Тоже можно использовать ro
 const srcFolder = `./src`;
 
 export const path = {
-  build: { files: `${buildFolder}/files/` },
-  src: { files: `${srcFolder}/files/**/*.*` },
-  watch: { files: `${srcFolder}/files/**/*.*` },
+  build: {
+    html: `${buildFolder}/`,
+    files: `${buildFolder}/files/`,
+  },
+  src: {
+    html: `${srcFolder}/*.html`,
+    files: `${srcFolder}/files/**/*.*`,
+  },
+  watch: {
+    html: `${srcFolder}/**/*.html` },
+    files: `${srcFolder}/files/**/*.*`
+  },
   clean: buildFolder,
   buildFolder: buildFolder,
   srcFolder: srcFolder,
